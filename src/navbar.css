@@ -6,7 +6,6 @@
     display: flex;
     -webkit-flex-direction: row;
     flex-direction: row-reverse;
-    color: var(--dblue);
 }
 
 #navbar-bkg{
@@ -15,7 +14,7 @@
     top: 0px;
     height: 90px;
     width: 100%;
-    background-color: var(--dblue);
+    background-color: var(--lblue);
 }
 
 .item-navbar{
