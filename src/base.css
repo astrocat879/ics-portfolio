@@ -1,0 +1,24 @@
+:root {
+    --dblue: #0042b5;
+    --lblue: #4a8cff;
+    --black: #3F3F3F;
+    zoom: 100%;
+}
+
+* {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.text{
+    color: white;
+}
+
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
