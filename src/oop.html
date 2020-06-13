@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title> Justin Zhu </title>
+        <link href="base.css" rel="stylesheet" type="text/css" />
+        <link href="navbar.css" rel="stylesheet" type="text/css" />
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <div id="navbar-bkg">
+            <div id="navbar">
+                <a class="home-title item-navbar" href="index.html">Justin Zhu</a>
+                <a class="item-navbar" href="projects.html">Projects</a>
+                <a class="item-navbar" href="tutorials.html">Tutorials</a>
+                <a class="item-navbar" href="index.html">Home</a>
+            </div>
+        </div>
+        <div class="blog">
+            <h1>OOP</h1>
+            <h2>What is OOP?</h2>
+                
+            <p>OOP stands for object oriented programming. In Java, this means creating <span class="highlight">classes</span>.</p>
+            <p>OOP is used for creating your own data structures. It allows programmers to define a set of properties and behaviours to represent objects. Below is an example of a class: </p>
+            <pre><code>public class Cat{
+}</code></pre>
+
+
+
+            <h2>Properties</h2>
+            <p>Properties, such as age or size, are present in all classes in the form of <span class="highlight">instance variables</span>.
+                Instance variables are variables which are present in all objects of a class, but can have different values. 
+                The the following example, we will make 2 integers, representing a cat's age and size.
+            </p>
+            <pre><code>public class Cat{
+    private int age, size;
+}</code></pre>
+
+
+            <h2>Constructor</h2>
+            <p>In order to create objects/instances of a class, we need a class constructor. </p>
+            <pre><code>public class Cat{
+    private int age, size;
+    public Cat(int age, int size){
+        this.age = age;
+        this.size = size;
+    }
+}</code></pre>
+            <p>With this constructor, we can now create <span class="highlight">objects</span>, which are instances of the class.</p>
+            <pre><code>Cat bob = new Cat(5, 10);
+Cat abby = new Cat(6, 20);</code></pre>
+
+
+            <h2>Behaviours</h2>
+            <p>Behaviours are common actions that can be performed by all objects of a class. We can modify the Cat class to show this.</p>
+            <pre><code>public class Cat{
+    private int age, size;
+    public Cat(int age, int size){
+        this.age = age;
+        this.size = size;
+    }
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+}</code></pre>
+        <p>Now, the age of the cat can be modified, and you can retrieve the age through a method call. </p>
+
+        <h2>Conclusion</h2>
+        <p>To create a primitive class, all you need are properties, behaviours, and a constructor. Have fun with OOP!</p>
+        <br>
+        <br>
+        </div>
+    </body>
+</html>

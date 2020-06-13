@@ -9,12 +9,39 @@
     top: 300px;
 }
 
-#about_text{
-    color: var(--black);
-    font-size: 20px;
-    margin: 0;
-
+.center {
+    position: absolute;
+    top: 30%;
+    width: 100%;
     text-align: center;
-    position : absolute;
-    top: 400px;
+    font-size: 18px;
 }
+
+.projectlist {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.blog {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    font-size: 18px;
+}
+
+.highlight{
+    font-weight: 600;
+    background-color: yellow;
+}
+
+pre code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: white;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+  }

@@ -31,20 +31,11 @@
     opacity: 0.68;
 }
 
-.home-logo{
-    order:1;
-    height: 40px;
-    margin: 0px 20px;
-    position: absolute;
-    left: 0px;
-    top: -10px;
-}
-
 .home-title{
     order:1;
     height: 50px;
     margin: 0px 20px;
     position: absolute;
-    left: 45px;
+    left: 20px;
     top: 0px;
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Justin Zhu </title>
+    <link href="base.css" rel="stylesheet" type="text/css" />
+    <link href="navbar.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div id="navbar-bkg">
+        <div id="navbar">
+            <a class="home-title item-navbar" href="index.html">Justin Zhu</a>
+            <a class="item-navbar" href="projects.html">Projects</a>
+            <a class="item-navbar" href="tutorials.html">Tutorials</a>
+            <a class="item-navbar" href="index.html">Home</a>
+        </div>
+    </div>
+    <div class="blog">
+        <h1>Arrays/ArrayLists</h1>
+        <h2>What are Arrays?</h2>
+        <p>Arrays are used to store many instances of a specific data type. 
+            They can easily represent a large list of objects. After initialization, the size of the array cannot be changed. 
+            The following code creates an integer array named arr, with size 50.</p>
+            <pre><code>int arr [] = new int [50];</code></pre>
+            <p>Arrays have <span class="highlight">indicies</span>, which point to different locations in an array. 
+            To modify an index:</p>
+            <pre><code>arr[0] = 4;</code></pre>
+            <p>In this example, index 0 now has the value 4.</p>
+            <p>To access an index:</p>
+            <pre><code>System.out.println(arr[0]);</code></pre>
+            <p>In this example, since index 0 has the value 4, 4 is outputted.</p>
+            <p><span class="highlight">Indices start at 0 and end at the size of the array - 1</span>. You can make an array of strings, integers, doubles, and any custom class you choose.</p>
+            <p>Note: if you access an index out of the bounds of the array, you get an IndexOutOfBoundsException.</p>
+
+        <h2>What are ArrayLists?</h2>
+        <p>ArrayList is a class found in <span class="highlight">java.util</span>, which allows for the creation of an array with mutable size.
+        This means objects can be added and removed from the ArrayList, which changes the size. To use ArrayLists, you must first import
+        java.util.ArrayList.</p>
+        <pre><code>import java.util.ArrayList;</code></pre>
+        <p>Then, you must create an ArrayList object:</p>
+        <pre><code>ArrayList&lt;Integer&gt; arr = new ArrayList&lt;Integer&gt;();</code></pre>
+        <p>You may also choose to set the size of the ArrayList in the initialization:</p>
+        <pre><code>ArrayList&lt;Integer&gt; arr = new ArrayList&lt;Integer&gt;(50);</code></pre>
+        <p>In this example, the size of the ArrayList is 50.</p>
+        <h2>ArrayList Methods</h2>
+        <p>There are many methods that can be used to interact with ArrayLists. Below, a few of them will be covered.</p>
+        <h3 class="highlight">add</h3>
+        <p>The add method allows you to insert elements inside the ArrayList. The method is overloaded, so there are two usages shown below.</p>
+        <pre><code>arr.add(50);</code></pre>
+        <p>The number 50 is added to the back of the ArrayList.</p>
+        <pre><code>arr.add(2, 50);</code></pre>
+        <p>The number 50 is added to index 2 in the ArrayList, pushing the previous elements back.</p>
+        <h3 class="highlight">size</h3>
+        <p>Calling <pre><code>arr.size();</code></pre> will return the size of the ArrayList.</p>
+        <h3 class="highlight">remove</h3>
+        <p>Calling <pre><code>arr.remove(2);</code></pre> will remove the element at index 2 in the ArrayList. All elements from index 3 and beyond are shifted.</p>
+        <h3 class="highlight">get</h3>
+        <p>This method will return the element found at a specified index.</p>
+        <pre><code>arr.get(2);</code></pre>
+        <p>This example would return the element at index 2.</p>
+        <p>Note: if you access an index out of the bounds of the ArrayList, you get an IndexOutOfBoundsException.</p>
+        <br>
+        <br>
+    </div>
+  </body>
+</html>
