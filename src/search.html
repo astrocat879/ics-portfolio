@@ -21,16 +21,83 @@
     </div>
     <div class="blog">
         <h1>Search/Sort</h1>
-        <h2>Linear Search</h2>
+        <h2>Searching Algorithms</h2>
+        <p>Below, 2 common searching algorithms will be covered.</p>
+        <h3>Linear Search</h3>
         <p>Linear searching is the most primitive search method. For example, if you wanted to find how many times a specific number appears in an array, you would loop through the length of the array, and count how many times the number is found.</p>
         <pre><code>for (int i=0;i&lt;arr.length;i++){
     if (arr[i] == searchNumber) cnt++;
 }</code></pre>
         <p>The time complexity of the code would be <span class="highlight">O(N)</span>, where N is the length of the array, since looping through the array takes N operations.</p>
-        <h2>Binary Search</h2>
+        <h3>Binary Search</h3>
+        <p>Binary search is another searching method. Binary search only works in cases where the array 
+            is split into 2 sides, where one side satisfies a condition while the other side doesn't satisfy it.
+            An example of a problem which satsfies this is:
+        </p>
+        <p>Given a sorted array, find how many numbers are greater than 10.</p>
+        <p>Linear search can solve this problem in O(N), but binary search can solve this in <span class="highlight">O(logN)</span>.</p>
+        <p>The idea is to divide the array down the middle, and check if the number is greater than 10. If it is greater, then we consider the subarray from index 0 to the middle. If it is smaller, we consider the subarray from the middle to the last index.</p>
+        <p>We then repeat this process, only now we do it on the subarray, until the subarray size is 0. Below is a code example.</p>
+        <pre><code>int l = 0, r = arr.length-1, answer = 0;
+while (l &lt; r){
+    int mid = (l + r)/2;
+    if (arr[mid] > 10){
+        r = mid-1;
+        answer = mid;
+    }
+    else{
+        l = mid+1;
+    }
+}
+System.out.println(arr.length - answer);</code></pre>
+        <p>The answer is outputted at the end.</p>
+        <h2>Sorting Algorithms</h2>
+        <p>Below, bubble sort and quick sort will be covered. Both of these algorithms will take an array and make the values in the array move in increasing order from left to right.</p>
+        <h3>Bubble Sort</h3>
+        <p>Bubble sort is often known as the most primitive sorting algorithm, since it is rather slow. The time complexity of the algorithm is <span class="highlight">O(N²).</span></p>
+        <p>If the size of the array is represented as N, the algorithm will loop N times, each time looping another N times to compare adjacent elements and swapping them if the left element is larger than the right element. Below is a code example.</p>
+        <pre><code>for (int i=0;i&lt;n;i++){
+    for (int j=1; j&lt;n; j++){
+        if (arr[j] &lt; arr[j-1]){
+            int temp = arr[j];
+            arr[j] = arr[j-1];
+            arr[j-1] = temp;
+        }
+    }
+}</code></pre>
+        <h3>Quick Sort</h3>
+        <p>Quick sort is a faster algorithm than bubble sort, with a time complexity of <span class="highlight">O(NlogN).</span></p>
+        <dt>To perform quicksort, you go through the following steps:</dt>
+        <dd>- Choose a number in your array (known as the pivot)
+        </dd>
+        <dd>- Smaller numbers in the array are moved to the left
+        </dd>
+        <dd>- Larger numbers in the array are moved to the right
+        </dd>
+        <dd>- This number is now in it’s correct spot
+        </dd>
+        <dd>- Repeat the process for the left side and the right side of the array
+        </dd>
+        <p>Below is a code example.</p>
+        <pre><code>static void swap(int [] array, int l, int r){
+    int tmp = array[l];
+    array[l] = array[r];
+    array[r] = tmp;
+}
 
-        <h2>Bubble Sort</h2>
-        <h2>Quick Sort</h2>
+static void QuickSort(int [] array, int low, int high){
+    if (low >= high) return;
+    int pivot = array[high], left = low;
+    for (int right = low; right &lt;= high;right++){
+        if (array[right] &lt; pivot){
+            swap(array, left, right);
+            left ++;
+        }
+    }
+    swap(array, high, left);
+    QuickSort(array, low, left-1);
+    QuickSort(array, left+1, high);
+}</code></pre>
         <br>
         <br>
     </div>

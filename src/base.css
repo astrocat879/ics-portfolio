@@ -22,4 +22,6 @@ a{
     text-decoration: none;
 }
 
-
+li {
+    display: inline;
+}
